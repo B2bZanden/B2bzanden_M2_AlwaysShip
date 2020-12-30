@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
     <event name="sales_order_shipment_save_before">
-        <observer name="orderAlwaysShip" instance="B2bzanden\AlwaysShip\Observer\AlwaysShipOrder" />
+        <observer name="orderAlwaysShip" instance="B2bzanden\AlwaysShip\Observer\AlwaysShipOrder"/>
     </event>
 </config>

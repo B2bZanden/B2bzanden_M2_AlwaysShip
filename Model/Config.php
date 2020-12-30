@@ -5,6 +5,7 @@
  * @copyright Copyright © 2020 B2bzanden. All rights reserved.
  * @author    Isolde van Oosterhout & Hans Kuijpers
  */
+
 namespace B2bzanden\AlwaysShip\Model;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;

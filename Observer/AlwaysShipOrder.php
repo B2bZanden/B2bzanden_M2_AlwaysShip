@@ -5,6 +5,7 @@
  * @copyright Copyright © 2020 B2bzanden. All rights reserved.
  * @author    Isolde van Oosterhout & Hans Kuijpers
  */
+
 namespace B2bzanden\AlwaysShip\Observer;
 
 use B2bzanden\AlwaysShip\Model\Config;
@@ -31,7 +32,7 @@ class AlwaysShipOrder implements ObserverInterface
         $this->stockState = $stockState;
         $this->sourceItemsSaveInterface = $sourceItemsSaveInterface;
         $this->sourceItemFactory = $sourceItemFactory;
-        if($this->devLogging) {
+        if ($this->devLogging) {
             $writer = new \Zend\Log\Writer\Stream(BP . '/var/log/b2bzanden_always_ship.log');
             $this->devLog = new \Zend\Log\Logger();
             $this->devLog->addWriter($writer);
@@ -40,12 +41,12 @@ class AlwaysShipOrder implements ObserverInterface
 
     public function execute(Observer $observer)
     {
-        if($this->config->isEnabled()) {
-            if($this->devLogging) {
+        if ($this->config->isEnabled()) {
+            if ($this->devLogging) {
                 $this->devLog->info(print_r('--AlwaysShipOrder execute', true));
             }
             $items = $observer->getEvent()->getShipment()->getAllItems();
-            if($items) {
+            if ($items) {
                 foreach ($items as $item) {
                     $productId = $item->getProductId();
                     $qty = $this->stockState->getStockQty($productId);
@@ -65,7 +66,7 @@ class AlwaysShipOrder implements ObserverInterface
                 }
             }
         }
-        if($this->devLogging) {
+        if ($this->devLogging) {
             $this->devLog->info(print_r('--AlwaysShipOrder extension is not enabled', true));
         }
     }

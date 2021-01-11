@@ -4,17 +4,14 @@
   "type": "magento2-module",
   "homepage": "https://github.com/hans2103/B2bzanden_M2_AlwaysShip",
   "description": "Magento 2 module to always ship even if product is not in stock",
-  "keywords": [
-    "composer-installer",
-    "magento"
-  ],
-  "version": "1.0.0",
+  "keywords":[ "composer-installer", "magento"],
+  "version": "1.0.1",
   "require": {
     "php": ">=7.1.0"
   },
-  "require-dev": {
-    "phpunit/phpunit": "*",
-    "composer/composer": "*@dev"
+  "require-dev":{
+    "phpunit/phpunit":"*",
+    "composer/composer":"*@dev"
   },
   "autoload": {
     "psr-4": {

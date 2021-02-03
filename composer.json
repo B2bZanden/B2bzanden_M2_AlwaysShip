@@ -2,10 +2,10 @@
   "name": "b2bzanden/alwaysship",
   "license": "OSL-3.0",
   "type": "magento2-module",
-  "homepage": "https://github.com/hans2103/B2bzanden_M2_AlwaysShip",
+  "homepage": "https://github.com/B2bzanden/B2bzanden_M2_AlwaysShip",
   "description": "Magento 2 module to always ship even if product is not in stock",
   "keywords":[ "composer-installer", "magento"],
-  "version": "1.0.1",
+  "version": "2.0.0",
   "require": {
     "php": ">=7.1.0"
   },
